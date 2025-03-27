@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'Aptos';
+  src: url('../fonts/Aptos-Display.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#form-page {
+  margin: 25px;
+}
+
+body {
+  font-family: 'Aptos', sans-serif;
+  position: relative; /* A body pozicionálása, hogy a footer a body-n belül legyen */
+  min-height: 100%;
+}
+
+#index-body {
+  background-image: url(../kepek/background.gif);
+  background-size: cover;
+  /* Az egész képernyőt lefedi */
+  background-position: center center;
+  /* A kép középre van igazítva */
+  background-repeat: no-repeat;
+  /* A háttérkép nem ismétlődik */
+  margin: 0;
+  /* Eltávolítja az alapértelmezett margót */
+  height: 100vh;
+  /* Az oldal teljes magasságát lefedi */
+
+}
+
+#submit1 {
+  margin-top: 13px;
+}
+
+
+/* Container középre igazítása és margóval */
+.container {
+  margin-top: 50px;
+  background-color: #090b0c00;
+  /* Világos háttérszín */
+}
+
+/* A sor (row) középre igazítása */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Oszlopok stílusa */
+.col {
+  background-color: #66666694;
+  /* Kék háttér */
+  color: white;
+  /* Fehér szöveg */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  /* Lekerekített sarkok */
+  text-align: center;
+  /* Középre igazított szöveg */
+}
+
+/* Responszív megjelenés beállítása: mobilon egy oszlop, nagyobb képernyőn három */
+@media (min-width: 576px) {
+  .col {
+    flex: 1;
+    /* Mindegyik oszlop egyformán elosztja a helyet */
+  }
+}
+
+@media (max-width: 575px) {
+  .col {
+    flex: 100%;
+  }
+}
+/* ------- */
+
+/* Animation 1 */
+.animation {
+  display: block;
+  /* A <a> tag blokk szintű elem legyen */
+  text-align: center;
+  /* Középre igazított szöveg */
+  background-color: #63aaf521;
+  /* Kék háttér */
+  color: white;
+  /* Fehér szöveg */
+  text-decoration: none;
+  /* Aláhúzás eltávolítása */
+  border-radius: 9px;
+  /* Lekerekített sarkok */
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  /* Zökkenőmentes animáció */
+  font-size: larger;
+  margin-top: 14px;
+}
+
+
+a.animation:hover {
+  background-color: #e4b10b;
+  /* Sötétebb kék háttér */
+  transform: scale(1.1);
+  /* Kicsit megnöveli a gombot */
+}
+
+a.animation:focus {
+  outline: none;
+  /* Alapértelmezett fókusz keret eltávolítása */
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  /* Kék fókusz árnyék */
+}
+
+a.animation {
+  opacity: 10;
+  animation: fadeIn 1s forwards;
+  /* Fading animáció */
+}
+/* --------- */
+
+/* Animation2 */
+/* --------- */
+.animation2 {
+  display: block;
+  /* A <a> tag blokk szintű elem legyen */
+  text-align: center;
+  /* Középre igazított szöveg */
+  background-color: #63aaf548;
+  /* Kék háttér */
+  color: white;
+  /* Fehér szöveg */
+  text-decoration: none;
+  /* Aláhúzás eltávolítása */
+  border-radius: 9px;
+  /* Lekerekített sarkok */
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  /* Zökkenőmentes animáció */
+  font-size: larger;
+  margin-top: 14px;
+}
+
+a.animation2:hover {
+  background-color: #b30000;
+  /* Sötétebb kék háttér */
+  transform: scale(1.1);
+  /* Kicsit megnöveli a gombot */
+}
+
+a.animation2:focus {
+  outline: none;
+  /* Alapértelmezett fókusz keret eltávolítása */
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  /* Kék fókusz árnyék */
+}
+
+a.animation2 {
+  opacity: 10;
+  animation: fadeIn 1s forwards;
+  /* Fading animáció */
+}
+
+/* --------- */
+
+/* Animation3 */
+/* --------- */
+.animation3 {
+  display: block;
+  /* A <a> tag blokk szintű elem legyen */
+  text-align: center;
+  /* Középre igazított szöveg */
+  background-color: #63aaf548;
+  /* Kék háttér */
+  color: white;
+  /* Fehér szöveg */
+  text-decoration: none;
+  /* Aláhúzás eltávolítása */
+  border-radius: 9px;
+  /* Lekerekített sarkok */
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  /* Zökkenőmentes animáció */
+  font-size: larger;
+  margin-top: 14px;
+}
+
+a.animation3:hover {
+  background-color: #5c00b3;
+  /* Sötétebb kék háttér */
+  transform: scale(1.1);
+  /* Kicsit megnöveli a gombot */
+}
+
+a.animation3:focus {
+  outline: none;
+  /* Alapértelmezett fókusz keret eltávolítása */
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  /* Kék fókusz árnyék */
+}
+
+a.animation3 {
+  opacity: 10;
+  animation: fadeIn 1s forwards;
+  /* Fading animáció */
+}
+
+/* --------- */
+
+/* Animáció létrehozása */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Színes feliratok (index.html) */
+/* ----------- */
+.kek {
+  color: rgb(75, 137, 219);
+}
+
+.piros {
+  color: red;
+}
+
+.sarga {
+  color: rgb(255, 208, 0);
+}
+
+.zold {
+  color: #00b386;
+}
+
+.bold {
+  font-weight: bolder;
+}
+/* --------- */
+
+
+/* Footer (index.html) */
+/* ------------ */
+footer {
+  text-align: center;
+  background-color: rgba(233, 150, 122, 0.342);
+  color: white;
+  padding: 20px;
+  position: absolute;
+  bottom: 0; /* Az oldal alján marad */
+  font-family: 'Aptos', sans-serif, system-ui, -apple-system, BlinkMacSystemFont,;
+  border-radius: 9px;
+}
+/* ----------- */
+
+
+main {
+  flex-grow: 1;
+}
+
+
+/* Header (index.html) */
+/* ---------- */
+#title{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#title-div{
+  display: block;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.199);
+  margin-left: 100px;
+  margin-right: 100px;
+  position:static;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  margin: 5px;
+  margin-top: 0;
+}
+
+
+div#title-div:focus {
+  outline: none;
+  /* Alapértelmezett fókusz keret eltávolítása */
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  /* Kék fókusz árnyék */
+}
+
+div#title-div {
+  opacity: 10;
+  animation: fadeIn 1s forwards;
+  /* Fading animáció */
+}
+
+/* --------- */
