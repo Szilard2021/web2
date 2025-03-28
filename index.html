@@ -7,73 +7,196 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>25.03.26</title>
+    <title>Szilard's site</title>
 </head>
 
 <body id="index-body">
-    <header>
+    <header style="margin-bottom: 50px;">
         <div id="title-div">
-            <h2 id="title">Szilard's site</h2>
+
+
+                    <h2 id="title"
+                    title="Ajánlott az oldalt ablakos teljesnézetben használni, mert esetleges problémák merülhetnek fel az oldal használata közben.">
+                    Szilard's site</h2>
+        
+                    <table style="margin-left: auto; margin-right: auto; margin-bottom: 0;">
+                        <tr>
+                            <td>
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <a class="animation2" href="./weather.html">
+                                            <div class="col">
+                                                Időjárás
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <a class="animation" href="./form.html">
+                                            <div class="col">
+                                                Űrlap
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <a class="animation3" href="./media.html">
+                                            <div class="col">
+                                                Média
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+           
+        </div>
+
+
+        <div class="blur" id="sticky">
+            <a href="https://google.com/" target="_blank" style="text-decoration: none;">
+                <felirat class="kek">G</felirat>
+                <felirat class="piros">o</felirat>
+                <felirat class="sarga">o</felirat>
+                <felirat class="kek">g</felirat>
+                <felirat class="zold">l</felirat>
+                <felirat class="piros">e</felirat>
+            </a>
+            <br>
+            <a href="https://www.gmail.com/" target="_blank" style="text-decoration: none;">
+                <felirat class="kek">G</felirat>
+                <felirat class="piros" class="bold">m</felirat>
+                <felirat class="sarga" class="bold">a</felirat>
+                <felirat class="kek" class="bold">i</felirat>
+                <felirat class="zold" class="bold">l</felirat>
+            </a>
+            <br>
+            <a href="https://classroom.google.com/ " target="_blank" style="text-decoration: none;">
+                <felirat class="kek">C</felirat>
+                <felirat class="piros" class="bold">l</felirat>
+                <felirat class="sarga" class="bold">a</felirat>
+                <felirat class="kek" class="bold">s</felirat>
+                <felirat class="zold" class="bold">s</felirat>
+                <felirat class="kek">r</felirat>
+                <felirat class="piros" class="bold">o</felirat>
+                <felirat class="sarga" class="bold">o</felirat>
+                <felirat class="kek" class="bold">m</felirat>
+            </a>
         </div>
     </header>
+    
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Leírás
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- CONTENT -->
 
-    <div class="container text-center">
-        <div class="row">
 
-            <a class="animation" href="https://www.google.com/" target="_blank">
-                <div class="col">
-                    <felirat class="kek">G</felirat>
-                    <felirat class="piros">o</felirat>
-                    <felirat class="sarga">o</felirat>
-                    <felirat class="kek">g</felirat>
-                    <felirat class="zold">l</felirat>
-                    <felirat class="piros">e</felirat>
-                </div>
-            </a>
-            <a href="https://www.gmail.com/" class="animation2" target="_blank">
-                <div class="col" class="bold">
-                    <felirat class="kek">G</felirat>
-                    <felirat class="piros" class="bold">m</felirat>
-                    <felirat class="sarga" class="bold">a</felirat>
-                    <felirat class="kek" class="bold">i</felirat>
-                    <felirat class="zold" class="bold">l</felirat>
-                </div>
-            </a>
 
-            <a href="https://classroom.google.com/" class="animation3" target="_blank">
-                <div class="col" class="bold">
-                    <felirat class="kek">C</felirat>
-                    <felirat class="piros" class="bold">l</felirat>
-                    <felirat class="sarga" class="bold">a</felirat>
-                    <felirat class="kek" class="bold">s</felirat>
-                    <felirat class="zold" class="bold">s</felirat>
-                    <felirat class="kek">r</felirat>
-                    <felirat class="piros" class="bold">o</felirat>
-                    <felirat class="sarga" class="bold">o</felirat>
-                    <felirat class="kek" class="bold">m</felirat>
+                    <!-- CONTENT -->
+                   Ez a weboldal külömböző elemekből áll, például időjárás, média. Az oldal saját, nem lopott! Az oldal méretét nem célszerű módosítani,<em title="Valószínüleg ugyan úgy látszódni fog rendesen minden nagyobb felbontásokon is, de alapból 1080p-ben lett tesztelve"><strong style="color: orange;">1920x1080-as kijelzőre</strong><sup>info</sup></em> és 100%os nagyításra lett tervezve. A weoldalt üzemelteti a <a href="https://github.com/" target="_blank" title="A GitHub Pages szolgáltatáson belül">GitHub</a>.
                 </div>
-            </a>
+            </div>
         </div>
-    </div>
-    <div class="container text-center">
-        <div class="row">
-            <a class="animation" href="./form.html">
-                <div class="col">
-                    Űrlap
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Oldalak
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- CONTENT -->
+
+                    <div id="centered">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./kepek/weather.png" class="card-img-top" alt="Weather"
+                                            title="Weather" width="300px" height="300px">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Időjárás</h5>
+                                            <p class="card-text">Lekérhető az összes ország, település hőfoka csupán
+                                                csak pár kattintásból</p>
+                                            <a href="./weather.html" class="btn btn-primary">megnyitás</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./kepek/media.jpg" class="card-img-top" width="300px" height="300px" alt="Média" title="Média">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Média</h5>
+                                            <p class="card-text">Itt külömböző média tartalmakat találhatsz!</p>
+                                            <a href="./media.html" class="btn btn-primary">Megnyitás</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hamarosan...</h5>
+                                            <p class="card-text">Hamarosan...</p>
+                                            <a href="#" class="btn btn-primary">Megnyitás</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
+
     </div>
 
-    <footer>
+<div class="footer">
         <p>&copy; 2025 Minden jog fenntartva.</p>
         <p>Bálint Szilárd</p>
-    </footer>
+    </div>
     <script>
         // Jobb klikk letiltása
         window.addEventListener('contextmenu', function (event) {
             event.preventDefault(); // Megakadályozza a jobb klikk menü megjelenítését
         });
+
+        // Megakadályozzuk a zoomot érintéses eszközöknél (mobil/tablet)
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault(); // Megakadályozza a zoomot
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', function (event) {
+            if (event.scale !== 1) {
+                event.preventDefault(); // Ha zoomot próbálnak csinálni, blokkolja
+            }
+        }, { passive: false });
+
+        // Görgetés letiltása Ctrl gombbal (egér esetén)
+        document.addEventListener('wheel', function (event) {
+            if (event.ctrlKey) {
+                event.preventDefault(); // Megakadályozza a nagyítást/görgetést együtt
+            }
+        }, { passive: false });
     </script>
 
     <script src="./javascript/bootstrap.bundle.js"></script>
