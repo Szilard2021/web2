@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Aptos';
+    src: url('../fonts/Aptos-Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    background-image: url(../kepek/background.gif);
+    background-size: cover;
+  /* Az egész képernyőt lefedi */
+  background-position: center center;
+  /* A kép középre van igazítva */
+  background-repeat: no-repeat;
+  /* A háttérkép nem ismétlődik */
+  margin: 0;
+  /* Eltávolítja az alapértelmezett margót */
+  height: 100vh;
+  /* Az oldal teljes magasságát lefedi */
+}
