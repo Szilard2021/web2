@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/weather.css">
+    <title>Időjárás</title>
+</head>
+
+<body id="index-body" class="animation">
+<header>
+   <div id="title-div" class="animation">
+    <h1 id="title" style="color: white;">Időjárás Lekérdezése</h1>
+   </div>
+   
+    <table style="margin-left: auto; margin-right: auto; margin-bottom: 0;">
+        <tr>
+            <td>
+                <div class="container text-center">
+                    <div class="row">
+                        <a class="animation" href="./index.html">
+                            <div class="col">
+                                Kezdőlap
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</header>
+   
+   
+    <div class="blur">
+        <div class="container">
+            <div class="input-box">
+                <h1 style="color: white; margin-bottom: 100px;">Időjárás</h1>
+                <input type="text" id="city" placeholder="Írja be a város nevét" />
+                <button onclick="getWeather()">Időjárás lekérése</button>
+            </div>
+
+            <div class="weather" id="weather-info">
+                <!-- Itt jelennek meg az időjárás információk -->
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <footer>
+            <p>&copy; 2025 Minden jog fenntartva.</p>
+            <p>Bálint Szilárd</p>
+        </footer>
+    </div>
+
+    <script>
+        // Jobb klikk letiltása
+        window.addEventListener('contextmenu', function (event) {
+            event.preventDefault(); // Megakadályozza a jobb klikk menü megjelenítését
+        });
+
+        // Megakadályozzuk a zoomot érintéses eszközöknél (mobil/tablet)
+        document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault(); // Megakadályozza a zoomot
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', function (event) {
+            if (event.scale !== 1) {
+                event.preventDefault(); // Ha zoomot próbálnak csinálni, blokkolja
+            }
+        }, { passive: false });
+
+        // Görgetés letiltása Ctrl gombbal (egér esetén)
+        document.addEventListener('wheel', function (event) {
+            if (event.ctrlKey) {
+                event.preventDefault(); // Megakadályozza a nagyítást/görgetést együtt
+            }
+        }, { passive: false });
+
+        async function getWeather() {
+            const city = document.getElementById('city').value;
+            const apiKey = 'WLL9NWKQ2RRUTJ2UVHTWFXLZR'; // Visual Crossing API kulcs
+            const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/weatherdata/forecast?location=${city}&aggregateHours=24&forecastHours=24&unitGroup=metric&shortColumnNames=true&key=${apiKey}&contentType=json`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.error) {
+                    document.getElementById('weather-info').innerHTML = `<p>Város nem található!</p>`;
+                } else {
+                    const weatherDescription = data.locations[city].currentConditions.conditions;
+                    const temperature = data.locations[city].currentConditions.temp;
+                    const icon = `https://weather.visualcrossing.com/images/icons/${data.locations[city].currentConditions.icon}.png`;
+
+                    document.getElementById('weather-info').innerHTML = `
+          <h2>${city} - ${temperature}°C</h2>
+          <p>${weatherDescription}</p>
+          <img src="${icon}" alt="weather icon" />
+        `;
+                }
+            } catch (error) {
+                console.log('Hiba:', error);
+                document.getElementById('weather-info').innerHTML = `<p>Hiba történt az időjárás adatainak lekérésekor!</p>`;
+            }
+        }
+    </script>
+    <script src="./javascript/weather.js"></script>
+</body>
+
+</html>
