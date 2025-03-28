@@ -12,7 +12,10 @@
 body {
   font-family: 'Aptos', sans-serif;
   position: relative; /* A body pozicionálása, hogy a footer a body-n belül legyen */
-  min-height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  max-height: 911px;
+  max-width: 1905px;
 }
 
 #index-body {
@@ -50,7 +53,7 @@ body {
 
 /* Oszlopok stílusa */
 .col {
-  background-color: #66666694;
+  background-color: #66666600;
   /* Kék háttér */
   color: white;
   /* Fehér szöveg */
@@ -243,17 +246,22 @@ a.animation3 {
 /* --------- */
 
 
+
 /* Footer (index.html) */
 /* ------------ */
-footer {
+.footer {
+ display: block;
   text-align: center;
   background-color: rgba(233, 150, 122, 0.342);
   color: white;
   padding: 20px;
-  position: absolute;
+  margin-top: auto; /* a láblécet mindig az aljára helyezi */
+  flex-direction: column;
   bottom: 0; /* Az oldal alján marad */
   font-family: 'Aptos', sans-serif, system-ui, -apple-system, BlinkMacSystemFont,;
   border-radius: 9px;
+  margin-top: 13.9%;
+  position:sticky ;
 }
 /* ----------- */
 
@@ -271,6 +279,11 @@ main {
   margin-top: 20px;
   text-align: center;
 }
+
+#sticky{
+  position: sticky;
+}
+
 
 #title-div{
   display: block;
@@ -300,3 +313,17 @@ div#title-div {
 }
 
 /* --------- */
+
+.blur{
+  border-radius: 5px;
+  background-color: rgba(34, 34, 34, 0.726);
+  transition: all 0.3s ease-in-out;
+  margin-right: 93%;
+}
+
+#centered{
+  display: blocks;
+  margin: auto 0;
+  margin-left: 500px;
+  margin-right: 500px;
+}
